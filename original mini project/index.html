@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <script>
+        // Show the alert on page load
+        window.onload = function () {
+            alert("For accurate prediction, fill all the inputs.");
+            // Once the user clicks OK, display the webpage content
+            document.body.style.display = "block";
+        };
+    </script>
+    
+
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        
+        <!-- City Selection -->
+        <label for="city" class="heading">Select City: <span class="required">*</span></label>
+        <select id="city">
+            <option value="" selected disabled>Select City</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+    </select>
+
+        <!-- Location Selection -->
+        <label for="location" class="heading">Select Location: <span class="required">*</span></label>
+        <select id="location">
+            <option value="">-- Select Location --</option>
+            <!-- Populate dynamically based on city -->
+        </select>
+
+        <!-- Input Fields -->
+        <label for="area" class="heading">Area (sqft): <span class="required">*</span></label>
+        <input type="text" id="area" placeholder="Enter area in sqft">
+
+
+        <!-- Features (Yes/No Options) -->
+        <div class="features">
+            <div class="feature">
+                <span class="heading">Bedrooms: <span class="required">*</span></span>
+                <select id="bedrooms">
+                    <option value="" selected disabled>Select Number of Bed rooms</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Resale: <span class="required">*</span></span>
+                <select id="resale">
+                    <option value="" selected disabled class="placeholder">Has this property been sold before?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Maintenance Staff: <span class="required">*</span></span>
+                <select id="maintainencestaff">
+                    <option value="" selected disabled class="placeholder">Are maintenance staff available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Gymnasium: <span class="required">*</span></span>
+                <select id="gymnasium">
+                    <option value="" selected disabled class="placeholder">Does the property include a gymnasium?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">SwimmingPool:</span>
+                <select id="swimmingpool">
+                    <option value="" selected disabled class="placeholder">Does the property have a swimming pool?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">LandscapedGardens:</span>
+                <select id="landscapedgarden">
+                    <option value="" selected disabled class="placeholder">Are landscaped gardens included?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">JoggingTrack:</span>
+                <select id="joggingtrack">
+                    <option value="" selected disabled class="placeholder">Is a jogging track available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">SportsFacility:</span>
+                <select id="sportsfacility">
+                    <option value="" selected disabled class="placeholder">Does the property include sports facilities?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">ATM:</span>
+                <select id="atm">
+                    <option value="" selected disabled class="placeholder">Is there an ATM nearby?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">24X7Security: <span class="required">*</span></span>
+                <select id="security">
+                    <option value="" selected disabled class="placeholder">Is 24/7 security available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">CarParking: <span class="required">*</span></span>
+                <select id="carparking">
+                    <option value="" selected disabled class="placeholder">Is car parking available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Rain Water Harvesting:</span>
+                <select id="rainwaterharvesting">
+                    <option value="" selected disabled class="placeholder">Is car parking available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Indoor Games:</span>
+                <select id="indoorgames">
+                    <option value="" selected disabled class="placeholder">Are Indoorgames available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Shopping Mall: <span class="required">*</span></span>
+                <select id="shoppingmall">
+                    <option value="" selected disabled class="placeholder">Is Shopping Mall Near By?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Intercom:</span>
+                <select id="intercom">
+                    <option value="" selected disabled class="placeholder">Is intercommunication available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Club House:</span>
+                <select id="clubhouse">
+                    <option value="" selected disabled class="placeholder">Is Club House available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">School: <span class="required">*</span></span>
+                <select id="School">
+                    <option value="" selected disabled class="placeholder">Is school Near By?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Power Backup: <span class="required">*</span></span>
+                <select id="powerbackup">
+                    <option value="" selected disabled class="placeholder">Is Power Backup available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="feature">
+                <span class="heading">Cafeteria:</span>
+                <select id="cafeteria">
+                    <option value="" selected disabled class="placeholder">Is Cafeteria available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">Multipurpose Room:</span>
+                <select id="multipurposeroom">
+                    <option value="" selected disabled class="placeholder">Is Multipurpose Room available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">Hospital:</span>
+                <select id="hospital">
+                    <option value="" selected disabled class="placeholder">Is Hospital nearby?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">WiFi:<span class="required">*</span></span>
+                <select id="wifi">
+                    <option value="" selected disabled class="placeholder">Is WiFi available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">Children's Play Area: <span class="required">*</span></span>
+                <select id="childrensplayarea">
+                    <option value="" selected disabled class="placeholder">Is Children's Play Area available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">Lift Available: <span class="required">*</span></span>
+                <select id="liftavailable">
+                    <option value="" selected disabled class="placeholder">Is Lift available?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">Vaastu Problem: <span class="required">*</span></span>
+                <select id="vaastuproblem">
+                    <option value="" selected disabled class="placeholder">Are there any Vaastu problems?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="feature">
+                <span class="heading">Golf Course:</span>
+                <select id="golfcourse">
+                    <option value="" selected disabled class="placeholder">Is Golf Course available nearby?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+
+
+        </div>
+
+        <!-- Submit Button -->
+        <button onclick="predictprice()">Predict Price</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

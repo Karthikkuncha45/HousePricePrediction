@@ -1,0 +1,89 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("C:\\Users\\kunch\\OneDrive\\Documents\\Desktop\\original mini project\\house.jpeg");
+            background-repeat: none;
+            background-size:100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select{
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-left: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .feature {
+            
+            justify-content: space-between;
+            align-items: center;
+            padding: 10 px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;    
+        }
+        .feature span {
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .placeholder {
+            opacity: 0.5; /* 50% opacity */
+            color:#555;
+        }
+
+        .heading{
+            font-family:'Times New Roman', Times, serif;
+            font-size: large;
+            font-weight: bold;
+        }
+        .heading .required {
+            color: red;
+            margin-left: 5px;
+        }
+        
+        

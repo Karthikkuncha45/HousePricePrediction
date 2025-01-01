@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Price Prediction</title>
-    <link rel="stylesheet" href="https://github.com/Karthikkuncha45/HousePricePrediction/blob/main/original%20mini%20project/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='script.js') }}">
 </head>
 <body>
 
@@ -274,6 +274,6 @@
         <button onclick="predictprice()">Predict Price</button>
     </div>
 
-    <script src="https://github.com/Karthikkuncha45/HousePricePrediction/blob/main/original%20mini%20project/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
